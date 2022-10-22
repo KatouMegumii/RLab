@@ -36,4 +36,12 @@ arrange(data,desc(is.na(x)))
 arrange(data,desc(is.na(x)),x)
 
 flights[c("month","year")]
+
+view(flights)
+
+arr1=arrange(flights,dep_time,sched_dep_time,dep_delay)
+arr2=arrange(flights,dep_time&sched_dep_time&dep_delay)
+arr3=arrange(flights,dep_time|sched_dep_time|dep_delay)
+
 select(flights,month,year)
+select(flights,month|year)
