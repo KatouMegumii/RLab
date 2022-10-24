@@ -53,3 +53,6 @@ x=matrix(c(3,6,7,10,15,19),nrow=1)
 y=matrix(c(4,4,6,10,10,14),nrow=6)
 xy=y%*%x
 Exy=sum(xy)/36
+
+n=20
+c(1:n)
