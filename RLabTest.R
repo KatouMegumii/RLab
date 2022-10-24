@@ -45,3 +45,11 @@ arr3=arrange(flights,dep_time|sched_dep_time|dep_delay)
 
 select(flights,month,year)
 select(flights,month|year)
+
+x=c(4,4,6,10,10,14)
+ex=sum(x^2)/6
+
+x=matrix(c(3,6,7,10,15,19),nrow=1)
+y=matrix(c(4,4,6,10,10,14),nrow=6)
+xy=y%*%x
+Exy=sum(xy)/36
