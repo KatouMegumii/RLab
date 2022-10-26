@@ -6,8 +6,7 @@ filter(flights, month == 11 | month == 12)
 filter(flights,month==11,month==12)
 filter(flights, month == 11&month == 12)
 
-filter(flights,month==1,day==1)
-filter(flights,month==1&day==1)
+test1=filter(flights,(month==1&day==1)|(month==6&day==6))
 
 df <- tibble(x = c(1, NA, 3))
 print(df)
@@ -39,12 +38,28 @@ flights[c("month","year")]
 
 view(flights)
 
-arr1=arrange(flights,dep_time,sched_dep_time,dep_delay)
-arr2=arrange(flights,dep_time&sched_dep_time&dep_delay)
-arr3=arrange(flights,dep_time|sched_dep_time|dep_delay)
+arrange(flights,dep_time,dep_delay,sched_dep_time)
+
+arrange(flights,dep_time,sched_dep_time)
+arrange(flights,dep_time&sched_dep_time)
+arrange(flights,dep_time|sched_dep_time)
+arrange(flights,1)
+arrange(flights,dep_time&dest)
+
+filter(flights,day==1,month==1,year==2013)
+filter(flights,day==1|month==1|year==2013)
+filter(flights,day==1,month==1|day==2,month==2)
+filter(flights,(day==1&month==1)|(day==2&month==2))
 
 select(flights,month,year)
 select(flights,month|year)
+select(flights,starts_with("dep"),vars="sched_dep_time")
+select(flights,num_range("dep_", c("time","delay")))
+
+vars=c("null","dep_time","arr_time")
+select(flights,one_of(vars))
+select(flights,any_of(vars))
+select(flights,all_of(vars))
 
 x=c(4,4,6,10,10,14)
 ex=sum(x^2)/6
