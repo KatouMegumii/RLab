@@ -1,0 +1,25 @@
+#循环内计数器
+count=0
+sumhatnum=0
+#模拟实验次数
+simutime=10000
+#单次实验容量
+pplnum=100
+while(count!=simutime){
+  #等容量不放回抽样
+  hat=sample(1:pplnum,size=pplnum,replace=FALSE)
+  #生成升序向量，与抽样比较
+  hatbox=(1:pplnum)
+  ifhat=hat/hatbox
+  #筛选出序号和抽样数据相等的元素输出哑变量
+  #为何不用which()：which在没有满足条件的元素时sum依然输出1
+  hattest=ifelse(ifhat==1,1,0)
+  #单次模拟实验中满足条件的元素的个数
+  hatnum=sum(hattest)
+  #总元素求和
+  sumhatnum=sumhatnum+hatnum
+  count=count+1
+}
+#能够拿到自己帽子的人的期望值
+avghatnum=sumhatnum/simutime
+print(avghatnum)
