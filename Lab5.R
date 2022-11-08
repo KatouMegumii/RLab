@@ -13,8 +13,3 @@ dplyr::select(data,imbgeco)
 
 table(data$imbgeco)
 attributes(data$imbgeco)
-
-reg1 <- lm(trstprl ~ trstun, data = data)
-summary(reg1)
-
-lm()
