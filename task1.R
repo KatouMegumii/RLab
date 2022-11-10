@@ -1,3 +1,5 @@
 library(tidyverse)
+library(car)
+library(MASS)
 load("WorldBankData.RData")
-attributes(WorldBank2017$CountryName)
+print(WorldBank2017)
