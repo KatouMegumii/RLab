@@ -1,20 +1,8 @@
-#R practical - Lab 6 - Regression Assumptions
-#SOST70011 Introduction to Statistical Modelling - 22/23
-
-#Some reference guides:
-#https://data.library.virginia.edu/diagnostic-plots/
-#https://www.ercankaradas.com/book/intro.html
-
-install.packages("tidyverse")
-install.packages("car")
-install.packages("MASS")
-
 library(MASS)
 library(car)
 library(tidyverse)
+library(ggplot2)
 
- 
-setwd("C:/Work") #Set this as your working directory if you are loading the data via R.
 load("ESS_data2.Rdata") #Miss out if you have loaded the data into R directly.
 
 reg4 <- lm(trstprl ~ trstun + gndr + agea + eduyrs + ctzcntr + pdwrk, data = data)
