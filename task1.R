@@ -1,5 +1,0 @@
-library(tidyverse)
-library(car)
-library(MASS)
-load("WorldBankData.RData")
-print(WorldBank2017)
