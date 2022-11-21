@@ -1,7 +1,7 @@
 library(tidyverse)
 library(MASS)
 library(car)
-load("ESS_data2.Rdata")
+load("../ESS_data2.Rdata")
 
 cor.test(data$trstun, data$trstprl, use = "complete.obs")
 
