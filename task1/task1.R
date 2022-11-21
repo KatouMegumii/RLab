@@ -32,6 +32,7 @@ summary(model)
 #多元线性回归的一些检验
 crPlots(model)#线性关系检验
 shapiro.test(model$residuals)#正态性检验
+par(mfrow=c(1,1))
 qqPlot(model,id.method = "identity",simulate=TRUE)#正态性检验
 ncvTest(model)#同方差性
 durbinWatsonTest(model)#独立性
