@@ -1,7 +1,7 @@
 library(ggplot2)
 library(car)
 #导入数据和处理数据
-load("task1/WorldBankData.RData")
+load("MidtermEssay/WorldBankData.RData")
 data=WorldBank2017[,c(1,7,9,19)]
 data_NA.rm=na.omit(data)
 
