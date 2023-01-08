@@ -1,4 +1,8 @@
-### Topics covered in ESS data
+## Topics covered in ESS data
+
+**To help find my own research problem**
+
+#### Individual Level
 
 * Media and social trust
 * politics
@@ -9,6 +13,16 @@
 * Socio-demographics
 * Human-values
 
-**to define my own research problems**
+#### Country Level
 
-### Potential variables
+***Part of all variables,which I'm interested in***
+
+* Demography: Old age dependency rates, Population size and density, Ethnolinguistic Fractionalization, Demographic balance and crude rates
+* Economy: GDP per Capita, Gini coefficient, Social expenditure, Unemployment
+* Health
+* Crime
+* Immigration
+
+## Data documents
+
+**variables I could use and their attributions**
